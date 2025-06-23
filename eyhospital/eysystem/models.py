@@ -31,7 +31,7 @@ class Prescription(models.Model):
 
 class Payment(models.Model):
     Tid=models.AutoField(primary_key=True)
-    medicine=models.ForeignKey(Prescription, on_delete=models.CASCADE)
+    madicine_Prescriptionid=models.ForeignKey(Prescription, on_delete=models.CASCADE)
     amount=models.DecimalField(max_digits=10, decimal_places=2)
     
     def __str__(self):
